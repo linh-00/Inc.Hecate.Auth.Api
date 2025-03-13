@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inc.Hecate.Auth.Api", "Inc.Hecate.Auth.Api.csproj", "{1AE3DC36-7F81-4EB6-AAB5-D9CC62BC94A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inc.Hecate.Auth.DAL", "..\Inc.Hecate.Auth.DAL\Inc.Hecate.Auth.DAL.csproj", "{DB185927-468F-4F94-B521-B7D49040F567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inc.Hecate.Auth.Shared", "..\Inc.Hecate.Auth.Shared\Inc.Hecate.Auth.Shared.csproj", "{2D6581BA-3845-45EA-9F22-32D938DACA2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inc.Hecate.Auth.Aplication", "..\Inc.Hecate.Auth.Aplication\Inc.Hecate.Auth.Aplication.csproj", "{0D101F26-B4EC-40AE-A04D-4F9F74D718AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inc.Hecate.Auth.Domain", "..\Inc.Hecate.Auth.Domain\Inc.Hecate.Auth.Domain.csproj", "{20B3410B-C187-4038-8AFA-4773C86C61CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inc.Hecate.Auth.IoC", "..\Inc.Hecate.Auth.IoC\Inc.Hecate.Auth.IoC.csproj", "{37E7190E-E451-4CCB-809E-BAA4BB44D92C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AE3DC36-7F81-4EB6-AAB5-D9CC62BC94A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AE3DC36-7F81-4EB6-AAB5-D9CC62BC94A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AE3DC36-7F81-4EB6-AAB5-D9CC62BC94A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AE3DC36-7F81-4EB6-AAB5-D9CC62BC94A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB185927-468F-4F94-B521-B7D49040F567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB185927-468F-4F94-B521-B7D49040F567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB185927-468F-4F94-B521-B7D49040F567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB185927-468F-4F94-B521-B7D49040F567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D6581BA-3845-45EA-9F22-32D938DACA2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D6581BA-3845-45EA-9F22-32D938DACA2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D6581BA-3845-45EA-9F22-32D938DACA2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D6581BA-3845-45EA-9F22-32D938DACA2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D101F26-B4EC-40AE-A04D-4F9F74D718AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D101F26-B4EC-40AE-A04D-4F9F74D718AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D101F26-B4EC-40AE-A04D-4F9F74D718AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D101F26-B4EC-40AE-A04D-4F9F74D718AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20B3410B-C187-4038-8AFA-4773C86C61CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B3410B-C187-4038-8AFA-4773C86C61CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B3410B-C187-4038-8AFA-4773C86C61CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B3410B-C187-4038-8AFA-4773C86C61CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37E7190E-E451-4CCB-809E-BAA4BB44D92C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E7190E-E451-4CCB-809E-BAA4BB44D92C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E7190E-E451-4CCB-809E-BAA4BB44D92C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E7190E-E451-4CCB-809E-BAA4BB44D92C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA708F94-AA47-4E3A-9451-F418147CD54A}
+	EndGlobalSection
+EndGlobal
