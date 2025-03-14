@@ -4,7 +4,7 @@ Hecate é uma API desenvolvida em **.NET** para gestão e autenticação de usu�
 
 ## Tecnologias Utilizadas
 
-- **.NET 7**
+- **.NET 8**
 - **SQL Server** (padrão)
 - **MongoDB** (opcional)
 - **JWT (JSON Web Token)** para autenticação segura
