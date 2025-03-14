@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inc.Hecate.Auth.Aplication.DTO.Request
 {
-    class UserResponse
+    public record UserResponse
     {
         public int Id { get; init; }
         public string Name { get; init; }

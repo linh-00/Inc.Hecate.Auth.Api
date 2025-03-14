@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inc.Hecate.Auth.Aplication.Interface
+namespace Inc.Hecate.Auth.Shared.Models.Configuration
 {
-    public interface IAuthenticateUseCase 
+    public record AuthenticationConfig
     {
+        public string Key { get; init; }
     }
 }

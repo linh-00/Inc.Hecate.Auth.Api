@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inc.Hecate.Auth.Aplication.DTO.Request
 {
-    class BearerToken
+    public record BearerToken
     {
         public string AccessToken { get; init; }
         public DateTime Expiration { get; init; }

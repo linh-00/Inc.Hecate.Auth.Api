@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inc.Hecate.Auth.Aplication.Interface
+namespace Inc.Hecate.Auth.Shared.Interface
 {
-    public interface IAuthenticateUseCase 
+    public interface IResponse
     {
     }
 }

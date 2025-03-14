@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inc.Hecate.Auth.Aplication.DTO.Reponse
 {
-    class LoginRequest
+    public record LoginRequest
     {
         public string Email { get; init; }
         public string Password { get; init; }

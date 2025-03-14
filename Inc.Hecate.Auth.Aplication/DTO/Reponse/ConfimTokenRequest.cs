@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inc.Hecate.Auth.Aplication.DTO.Reponse
 {
-    class ConfimTokenRequest
+    public record ConfimTokenRequest
     {
         public string password { get; init; }
         public string TokenConfirmacao { get; init; }
