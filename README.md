@@ -61,12 +61,12 @@ dotnet run --project ./Presentation
 ### Autenticação
 
 - **POST** `/api/v1/authenticate/login` - Realiza login e retorna um token JWT
-- **POST** `/api/authenticate/register` - Cadastra um novo usuário
+- **POST** `/api/v1/authenticate/register` - Cadastra um novo usuário
 
 ### Usuários
 
-- **GET** `/api/users` - Lista todos os usuários (somente para admins)
-- **GET** `/api/users/{id}` - Obtém detalhes de um usuário
+- **GET** `/api/v1/users` - Lista todos os usuários (somente para admins)
+- **GET** `/api/v1/users/{id}` - Obtém detalhes de um usuário
 
 ## Exemplo de Requisição JWT
 
@@ -85,7 +85,7 @@ Content-Type: application/json
 ```json
 {
     
-      "AccessToken":                 "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJlbWFpbCI6ImFsaW5uZWxhdXJlbkBob3RtYWlsLmNvbSIsImp0aSI6IjlkNDExZTBkLWM1N2QtNGU4ZC04OGE4LTUxNjA1MThhM2Q0MiIsImV4cCI6MTc0MjY2OTM5Nn0.hMcJXrR9p6LWrO3qmBZa_Ce5_F3f7vElxweIS14XfLo",
+      "AccessToken":   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJlbWFpbCI6ImFsaW5uZWxhdXJlbkBob3RtYWlsLmNvbSIsImp0aSI6IjlkNDExZTBkLWM1N2QtNGU4ZC04OGE4LTUxNjA1MThhM2Q0MiIsImV4cCI6MTc0MjY2OTM5Nn0.hMcJXrR9p6LWrO3qmBZa_Ce5_F3f7vElxweIS14XfLo",
       "Expiration": "2025-03-22T18:49:56.8574573Z"
 
 }
