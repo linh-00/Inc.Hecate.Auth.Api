@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Inc.Hecate.Auth.Aplication.DTO.Reponse
 {
-    public record ConfimTokenRequest
+    public record BearerToken
     {
-        public string password { get; init; }
-        public string TokenConfirmacao { get; init; }
+        public string AccessToken { get; init; }
+        public DateTime Expiration { get; init; }
     }
 }

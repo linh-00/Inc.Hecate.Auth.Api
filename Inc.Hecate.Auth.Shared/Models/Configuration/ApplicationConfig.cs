@@ -9,7 +9,6 @@ namespace Inc.Hecate.Auth.Shared.Models.Configuration
     public record ApplicationConfig
     {
         public AuthenticationConfig Authentication { get; init; }
-        public FileConfiguration FileConfiguration { get; init; }
         public string BuildId { get; set; }
     }
 }
