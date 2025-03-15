@@ -18,7 +18,8 @@ Hecate
 ├── Application     # Camada de Aplicação com regras de negócio
 ├── DAL             # Camada de Infraestrutura com acesso a dados (DAL)
 ├── API		    # Camada de Apresentação (Controllers e Endpoints)
-└── Tests           # Testes unitários e de integração
+│   └── Authentication # Implementação completa de autenticação com expiração de token
+└── IoC             # Implementação da Inversão de Controle (IoC)
 ```
 
 ## Configuração do Ambiente
@@ -59,8 +60,8 @@ dotnet run --project ./Presentation
 
 ### Autenticação
 
-- **POST** `/api/auth/login` - Realiza login e retorna um token JWT
-- **POST** `/api/auth/register` - Cadastra um novo usuário
+- **POST** `/api/authenticate/login` - Realiza login e retorna um token JWT
+- **POST** `/api/authenticate/register` - Cadastra um novo usuário
 
 ### Usuários
 
@@ -83,13 +84,16 @@ Content-Type: application/json
 
 ```json
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR..."
+    "AccessToken": "eyJhbGciOiJIUzI1NiIsInR..."
 }
 ```
 
 ## Melhorias Futuras
 
--
+* **Autorização de Usuários:** Implementar um sistema de autorização baseado em roles ou claims, permitindo controlar o acesso a diferentes recursos da API com base nas permissões do usuário.
+* **Testes Automatizados:** Adicionar testes automatizados (unitários e de integração) para garantir a qualidade e o correto funcionamento da aplicação.
+* **Documentação da API:** Gerar documentação da API utilizando Swagger ou outras ferramentas, facilitando o consumo da API por outros desenvolvedores.
+* **Monitoramento e Logging:** Implementar monitoramento e loggi
 
 ## Contribuição
 
