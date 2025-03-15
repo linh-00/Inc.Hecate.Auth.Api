@@ -60,7 +60,7 @@ dotnet run --project ./Presentation
 
 ### Autenticação
 
-- **POST** `/api/authenticate/login` - Realiza login e retorna um token JWT
+- **POST** `/api/v1/authenticate/login` - Realiza login e retorna um token JWT
 - **POST** `/api/authenticate/register` - Cadastra um novo usuário
 
 ### Usuários
@@ -84,7 +84,10 @@ Content-Type: application/json
 
 ```json
 {
-    "AccessToken": "eyJhbGciOiJIUzI1NiIsInR..."
+    
+      "AccessToken":                 "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJlbWFpbCI6ImFsaW5uZWxhdXJlbkBob3RtYWlsLmNvbSIsImp0aSI6IjlkNDExZTBkLWM1N2QtNGU4ZC04OGE4LTUxNjA1MThhM2Q0MiIsImV4cCI6MTc0MjY2OTM5Nn0.hMcJXrR9p6LWrO3qmBZa_Ce5_F3f7vElxweIS14XfLo",
+      "Expiration": "2025-03-22T18:49:56.8574573Z"
+
 }
 ```
 
