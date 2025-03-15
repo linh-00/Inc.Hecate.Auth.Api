@@ -15,6 +15,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Inc.Hecate.Auth.Aplication\Inc.Hecate.Auth.Aplication.csproj" />
+    <ProjectReference Include="..\Inc.Hecate.Auth.DAL\Inc.Hecate.Auth.DAL.csproj" />
+    <ProjectReference Include="..\Inc.Hecate.Auth.Domain\Inc.Hecate.Auth.Domain.csproj" />
+    <ProjectReference Include="..\Inc.Hecate.Auth.IoC\Inc.Hecate.Auth.IoC.csproj" />
+    <ProjectReference Include="..\Inc.Hecate.Auth.Shared\Inc.Hecate.Auth.Shared.csproj" />
   </ItemGroup>
 
 </Project>
