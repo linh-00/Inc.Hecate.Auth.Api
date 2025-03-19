@@ -27,7 +27,7 @@ Hecate
 ### 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/lihn-00/hecate.git
+git clone https://github.com/linh-00/hecate.git
 cd hecate
 ```
 
