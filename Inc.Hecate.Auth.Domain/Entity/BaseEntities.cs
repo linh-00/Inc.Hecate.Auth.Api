@@ -8,12 +8,12 @@ namespace Inc.Hecate.Auth.Domain.Entity
 {
     public class BaseEntities
     {
-        public int? Id { get; private set; }
-        public BaseEntities(int? id)
+        public Guid? Id { get; private set; }
+        public BaseEntities(Guid? id)
         {
             Id = id;
         }
-        public void SetId(int id)
+        public void SetId(Guid id)
         {
             Id = id;
         }

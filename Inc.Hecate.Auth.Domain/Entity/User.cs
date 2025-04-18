@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Inc.Hecate.Auth.Domain.Entity
 {
-    public class User
+    public class User : BaseEntities
     {
-        public int Id { get; private set; }
-        public string Name { get; private set; }
-        public string Login { get; private set; }
+        public Guid AccountId { get; private set; }
         public string Email { get; private set; }
         public string Password { get; private set; }
 
-        public User(int id, string name, string login, string email, string password)
+        //public ICollection<ScopeUser> Scopes { get; set; }
+        //public ICollection<RulesUser> Rules { get; set; }
+
+
+        public User(int id, Guid accountId, string email, string password) : base(id)
         {
-            Id = id;
-            Name = name;
-            Login = login;
+            AccountId = accountId;
             Email = email;
             Password = password;
         }
