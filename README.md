@@ -18,7 +18,8 @@ Hecate
 ├── Application     # Camada de Aplicação com regras de negócio
 ├── DAL             # Camada de Infraestrutura com acesso a dados (DAL)
 ├── API		    # Camada de Apresentação (Controllers e Endpoints)
-└── Tests           # Testes unitários e de integração
+│   └── Authentication # Implementação completa de autenticação com expiração de token
+└── IoC             # Implementação da Inversão de Controle (IoC)
 ```
 
 ## Configuração do Ambiente
@@ -26,7 +27,7 @@ Hecate
 ### 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/hecate.git
+git clone https//github.com/linh-00/Inc.Hecate.Auth.Api.git
 cd hecate
 ```
 
@@ -59,13 +60,13 @@ dotnet run --project ./Presentation
 
 ### Autenticação
 
-- **POST** `/api/auth/login` - Realiza login e retorna um token JWT
-- **POST** `/api/auth/register` - Cadastra um novo usuário
+- **POST** `/api/v1/authenticate/login` - Realiza login e retorna um token JWT
+- **POST** `/api/v1/authenticate/register` - Cadastra um novo usuário
 
 ### Usuários
 
-- **GET** `/api/users` - Lista todos os usuários (somente para admins)
-- **GET** `/api/users/{id}` - Obtém detalhes de um usuário
+- **GET** `/api/v1/users` - Lista todos os usuários (somente para admins)
+- **GET** `/api/v1/users/{id}` - Obtém detalhes de um usuário
 
 ## Exemplo de Requisição JWT
 
@@ -83,13 +84,19 @@ Content-Type: application/json
 
 ```json
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR..."
+    
+      "AccessToken":   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJlbWFpbCI6ImFsaW5uZWxhdXJlbkBob3RtYWlsLmNvbSIsImp0aSI6IjlkNDExZTBkLWM1N2QtNGU4ZC04OGE4LTUxNjA1MThhM2Q0MiIsImV4cCI6MTc0MjY2OTM5Nn0.hMcJXrR9p6LWrO3qmBZa_Ce5_F3f7vElxweIS14XfLo",
+      "Expiration": "2025-03-22T18:49:56.8574573Z"
+
 }
 ```
 
 ## Melhorias Futuras
 
--
+* **Autorização de Usuários:** Implementar um sistema de autorização baseado em roles ou claims, permitindo controlar o acesso a diferentes recursos da API com base nas permissões do usuário.
+* **Testes Automatizados:** Adicionar testes automatizados (unitários e de integração) para garantir a qualidade e o correto funcionamento da aplicação.
+* **Documentação da API:** Gerar documentação da API utilizando Swagger ou outras ferramentas, facilitando o consumo da API por outros desenvolvedores.
+* **Monitoramento e Logging:** Implementar monitoramento e loggi
 
 ## Contribuição
 
