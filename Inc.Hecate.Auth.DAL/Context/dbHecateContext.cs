@@ -26,10 +26,10 @@ public partial class dbHecateContext : DbContext
     {
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.ACCOUNT_ID).HasName("PK__User__05B22F60AEB43A01");
+            entity.HasKey(e => e.ID).HasName("PK__User__3214EC27E9BE4156");
 
+            entity.Property(e => e.ID).HasDefaultValueSql("(newid())");
             entity.Property(e => e.ACCOUNT_ID).HasDefaultValueSql("(newid())");
-            entity.Property(e => e.ACCOINT_ID).HasDefaultValueSql("(newid())");
         });
 
         OnModelCreatingPartial(modelBuilder);

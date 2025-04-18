@@ -10,15 +10,15 @@ namespace Inc.Hecate.Auth.DAL.Models;
 public partial class User
 {
     [Key]
+    public Guid ID { get; set; }
+
     public Guid ACCOUNT_ID { get; set; }
 
-    public Guid? ACCOINT_ID { get; set; }
+    [StringLength(500)]
+    [Unicode(false)]
+    public string EMAIL { get; set; } = null!;
 
     [StringLength(500)]
     [Unicode(false)]
-    public string? EMAIL { get; set; }
-
-    [StringLength(500)]
-    [Unicode(false)]
-    public string? PASSWORD { get; set; }
+    public string PASSWORD { get; set; } = null!;
 }
