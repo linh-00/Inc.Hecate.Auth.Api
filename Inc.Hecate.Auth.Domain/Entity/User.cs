@@ -16,7 +16,13 @@ namespace Inc.Hecate.Auth.Domain.Entity
         //public ICollection<RulesUser> Rules { get; set; }
 
 
-        public User(int id, Guid accountId, string email, string password) : base(id)
+        public User(Guid id, Guid accountId, string email, string password) : base(id)
+        {
+            AccountId = accountId;
+            Email = email;
+            Password = password;
+        }
+        public User(Guid accountId, string email, string password)
         {
             AccountId = accountId;
             Email = email;

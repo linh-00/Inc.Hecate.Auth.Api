@@ -6,21 +6,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Inc.Hecate.Auth.DAL.Models;
 
-[Table("User")]
-public partial class User
+public partial class Rule
 {
     [Key]
     public Guid ID { get; set; }
 
-    public Guid ACCOUNT_ID { get; set; }
+    [StringLength(500)]
+    [Unicode(false)]
+    public string NAME { get; set; } = null!;
 
     [StringLength(500)]
     [Unicode(false)]
-    public string EMAIL { get; set; } = null!;
+    public string DESCRIPTION { get; set; } = null!;
 
-    [StringLength(500)]
-    [Unicode(false)]
-    public string PASSWORD { get; set; } = null!;
+    public Guid SCOPE_ID { get; set; }
 
     [Column(TypeName = "datetime")]
     public DateTime CREATED_AT { get; set; }
@@ -36,9 +35,10 @@ public partial class User
     [Unicode(false)]
     public string? UPDATED_BY { get; set; }
 
-    [InverseProperty("USER")]
+    [InverseProperty("RULES")]
     public virtual ICollection<RulesUser> RulesUsers { get; set; } = new List<RulesUser>();
 
-    [InverseProperty("USER")]
-    public virtual ICollection<ScopeUser> ScopeUsers { get; set; } = new List<ScopeUser>();
+    [ForeignKey("SCOPE_ID")]
+    [InverseProperty("Rules")]
+    public virtual Scope SCOPE { get; set; } = null!;
 }
