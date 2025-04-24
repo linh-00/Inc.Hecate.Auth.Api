@@ -30,11 +30,22 @@ namespace Inc.Hecate.Auth.Domain.Entity
             UpdatedAt = updatedAt;
             UpdatedBy = updatedBy;
         }
-        public User(Guid accountId, string email, string password)
+        public User(Guid accountId, string email, string password, string createdBy)
         {
             AccountId = accountId;
             Email = email;
             Password = password;
+            CreatedAt = DateTime.Now;
+            CreatedBy = createdBy;
+
+        }
+        public void Update(Guid accountId, string email, string password, string updatedBy)
+        {
+            AccountId = accountId;
+            Email = email;
+            Password = password;
+            CreatedAt = DateTime.Now;
+            UpdatedBy = updatedBy;
         }
     }
 }
