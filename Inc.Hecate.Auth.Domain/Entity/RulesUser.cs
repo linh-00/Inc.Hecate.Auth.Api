@@ -10,5 +10,15 @@ namespace Inc.Hecate.Auth.Domain.Entity
     {
         public IEnumerable<User> UserId { get; private set; } = new List<User>();
         public IEnumerable<Rules> RulesId { get; private set; } = new List<Rules>();
+
+        public void SetUsers(IEnumerable<User> userId)
+        {
+            UserId = userId ?? new List<User>();
+        }
+
+        public void SetRulers(IEnumerable<Rules> rulesId)
+        {
+            RulesId = rulesId ?? new List<Rules>();
+        }
     }
 }

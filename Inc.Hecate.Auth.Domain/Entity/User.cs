@@ -16,8 +16,8 @@ namespace Inc.Hecate.Auth.Domain.Entity
         public DateTime? UpdatedAt { get; private set; }
         public string? UpdatedBy { get; private set; }
 
-        //public ICollection<ScopeUser> Scopes { get; set; }
-        //public ICollection<RulesUser> Rules { get; set; }
+        public ICollection<>
+        public ICollection<RulesUser> Id { get; private set; } = new List<Rules>();
 
 
         public User(Guid id, Guid accountId, string email, string password, DateTime createdAt, string createdBy, DateTime? updatedAt, string? updatedBy) : base(id)
