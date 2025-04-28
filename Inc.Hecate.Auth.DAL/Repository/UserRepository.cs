@@ -3,6 +3,7 @@ using Inc.Hecate.Auth.DAL.Context;
 using Inc.Hecate.Auth.DAL.Models;
 using Inc.Hecate.Auth.Domain.Entity;
 using Inc.Hecate.Auth.Domain.Interface;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
@@ -33,9 +34,23 @@ namespace Inc.Hecate.Auth.DAL.Repository
             };
             _Context.Users.Add(newUser);
             await _Context.SaveChangesAsync();
-            request.SetId(newUser.ID);
             return request;
         }
+        public async Task<UserEntity> Update(UserEntity request)
+        {
+            var user = await _Context.Users.Where(x => x.ID.Equals(request.Id)).FirstOrDefaultAsync();
+            if(user is not null)
+            {
+                user.EMAIL = request.Email;
+                user.PASSWORD = request.Password;
+                user.UPDATED_AT = request.UpdatedAt;
+                user.UPDATED_BY = request.UpdatedBy;
 
+                _Context.Users.Update(user);
+                await _Context.SaveChangesAsync();
+                return request;
+            }
+            else { throw new Exception("Não foi possível atualizar o usuário"); }
+        }
     }
 }
