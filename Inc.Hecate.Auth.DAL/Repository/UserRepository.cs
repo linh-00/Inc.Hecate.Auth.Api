@@ -1,5 +1,6 @@
 ﻿using Azure.Core;
 using Inc.Hecate.Auth.DAL.Context;
+using Inc.Hecate.Auth.DAL.Models;
 using Inc.Hecate.Auth.Domain.Interface;
 using Microsoft.EntityFrameworkCore;
 using UserEntity = Inc.Hecate.Auth.Domain.Entity.User;
@@ -43,6 +44,36 @@ namespace Inc.Hecate.Auth.DAL.Repository
                 return request;
             }
             else { throw new Exception("Não foi possível atualizar o usuário"); }
+        }
+        public async Task<UserEntity> GetById(UserEntity request)
+        {
+            var user = await _Context.Users.Where(x => x.ID.Equals(request.Id)).FirstOrDefaultAsync();
+            if (user is not null)
+            {
+                return new UserEntity(user.ID, user.ACCOUNT_ID, user.EMAIL, user.PASSWORD, user.CREATED_AT, user.CREATED_BY, user.UPDATED_AT, user.UPDATED_BY);
+            }
+            else { throw new Exception("Usuário não encontrado"); }
+        }
+        public async Task<IEnumerable<UserEntity>> GetAll()
+        {
+            List<User> user = await _Context.Users.ToListAsync();
+            if (user is not null)
+            {
+                return user.Select(res => new UserEntity(res.ID, res.ACCOUNT_ID, res.EMAIL, res.PASSWORD, res.CREATED_AT, res.CREATED_BY, res.UPDATED_AT, res.UPDATED_BY));
+            }
+            else { throw new Exception("Não foi possível atualizar o usuário"); }
+        }
+        public async Task<bool> Delete(int id)
+        {
+            var user = await _Context.Users.Where(x => x.ID.Equals(id)).FirstOrDefaultAsync();
+
+            if (user is not null)
+            {
+                _Context.Users.Remove(user);
+                await _Context.SaveChangesAsync();
+                return true;
+            }
+            else { throw new Exception("Não foi possível deletar o usuário"); }
         }
     }
 }
